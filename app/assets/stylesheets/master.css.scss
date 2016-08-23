@@ -38,3 +38,13 @@ $white: #fff;
   padding: 15px;
   background: $white;
 }
+
+.standard-boxes {
+  padding: 15px;
+  margin-top: 30px;
+
+  h1 {
+    font-weight: 300;
+    color: $blue;
+  }
+}
