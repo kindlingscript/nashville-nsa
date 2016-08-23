@@ -1,0 +1,32 @@
+$blue: #0197F5;
+
+.navbar-nav > li > a, .navbar-brand {
+  height: 100px;
+}
+
+.hero {
+  background: url('nashville.jpg') no-repeat 0% 50%;
+    -webkit-background-size: cover;
+	  -moz-background-size: cover;
+	  -o-background-size: cover;
+	  background-size: cover;
+    height: 700px;
+}
+
+.intro {
+  margin-top: 8%;
+  color: #fff;
+
+  h1 {
+    background: rgba(95, 159, 203, 0.5);
+    padding: 3rem;
+    text-align: justify;
+  }
+}
+
+.hero-button {
+  padding: 10px 15px;
+  border: none;
+  background: #57CD79;
+  font-size: 22px;
+}

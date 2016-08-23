@@ -1,0 +1,70 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ @import "bootstrap-sprockets";
+ @import "bootstrap";
+
+ $blue: #0197F5;
+ $white: #fff;
+
+// Styles that override bootstrap so I don't have to type !important everywhere
+ .navbar {
+   min-height: 100px;
+   margin-bottom: 0;
+ }
+
+ .navbar-nav > li > a, .navbar-brand {
+   padding-top: 35px;
+   padding-bottom: 0;
+ }
+
+ .navbar-default .navbar-nav > li > a,
+ .navbar-default .navbar-brand {
+   color: $blue;
+ }
+
+ .navbar-default .navbar-nav > li > a {
+    font-size: 18px;
+ }
+
+ .navbar-default {
+   background-color: $white;
+   border-bottom: 1px solid $blue;
+ }
+
+ .navbar-default .navbar-brand {
+   font-size: 32px;
+ }
+
+ ul.nav.navbar-nav.navbar-right {
+
+   li:first-child a {
+     border: 1px solid $blue;
+     border-radius: 5px;
+     color: $blue;
+     padding: 10px 15px;
+     position: relative;
+     top: 35px;
+     right: 10px;
+     font-size: 18px;
+
+     &:hover {
+       text-decoration: none;
+     }
+     
+   }
+
+ }

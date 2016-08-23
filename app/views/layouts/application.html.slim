@@ -1,0 +1,37 @@
+doctype html
+html lang="en"
+  head
+    title Nashville NSA
+    meta charset="utf-8"
+    meta name="viewport" content="width=device-width, initial-scale=1.0"
+
+    title == content_for?(:title) ? yield(:title) : "Untitled"
+
+    = stylesheet_link_tag "application"
+    = javascript_include_tag "vendor/modernizr"
+    = javascript_include_tag "application", 'data-turbolinks-track' => true
+    = csrf_meta_tag
+
+  body
+
+    nav.navbar.navbar-default role="navigation"
+      .container-fluid
+        /! Brand and toggle get grouped for better mobile display
+        .navbar-header
+          button.navbar-toggle data-target="#bs-example-navbar-collapse-1" data-toggle="collapse" type="button"
+            span.sr-only Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.navbar-brand href="#" Nashville NSA
+        /! Collect the nav links, forms, and other content for toggling
+        #bs-example-navbar-collapse-1.collapse.navbar-collapse
+          ul.nav.navbar-nav.navbar-right
+            li
+              span
+                a href="#" Create an account
+            li
+              a href="#" Log in
+
+
+    == yield
