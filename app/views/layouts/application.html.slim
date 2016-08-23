@@ -29,15 +29,15 @@ html lang="en"
           ul.nav.navbar-nav.navbar-right
             - if user_signed_in?
               li
-                = link_to 'My account', '#'
+                = link_to 'My profile', '#'
               li
                 = link_to 'Log out', destroy_user_session_path, method: :delete
             - else
               li class="sign-in"
                 span
-                  a href="#" Create an account
+                  = link_to 'Create an account', new_user_registration_path
               li
-                a href="#" Log in
+                = link_to 'Log in', new_user_session_path
 
     - if notice.present?
       p class="alert alert-info"
