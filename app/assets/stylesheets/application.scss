@@ -51,7 +51,7 @@
 
  ul.nav.navbar-nav.navbar-right {
 
-   li:first-child a {
+   li.sign-in a {
      border: 1px solid $blue;
      border-radius: 5px;
      color: $blue;
@@ -64,7 +64,7 @@
      &:hover {
        text-decoration: none;
      }
-     
+
    }
 
  }

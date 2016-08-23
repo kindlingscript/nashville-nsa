@@ -27,11 +27,23 @@ html lang="en"
         /! Collect the nav links, forms, and other content for toggling
         #bs-example-navbar-collapse-1.collapse.navbar-collapse
           ul.nav.navbar-nav.navbar-right
-            li
-              span
-                a href="#" Create an account
-            li
-              a href="#" Log in
+            - if user_signed_in?
+              li
+                = link_to 'My account', '#'
+              li
+                = link_to 'Log out', destroy_user_session_path, method: :delete
+            - else
+              li class="sign-in"
+                span
+                  a href="#" Create an account
+              li
+                a href="#" Log in
 
+    - if notice.present?
+      p class="alert alert-info"
+        = notice
+    - if alert.present?
+      p class="alert alert-danger"
+        = alert
 
     == yield
