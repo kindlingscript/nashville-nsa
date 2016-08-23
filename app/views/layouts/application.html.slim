@@ -30,7 +30,7 @@ html lang="en"
           ul.nav.navbar-nav.navbar-right
             - if user_signed_in?
               li
-                = link_to "My profile", "#"
+                = link_to "My profile", user_path(current_user.username)
               li
                 = link_to "Log out", destroy_user_session_path, method: :delete
             - else
