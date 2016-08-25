@@ -1,0 +1,9 @@
+section class="standard-boxes col-md-6 col-md-offset-3"
+  h1 Share some thoughts with us
+  br
+  = simple_form_for @post do |f|
+    = f.input :title
+    br
+    = f.input :body
+    br
+    = f.submit 'Post', :class => 'btn btn-primary'
