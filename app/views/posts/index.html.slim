@@ -1,1 +1,12 @@
-h1 Welcome to the blog!
+section class="header"
+  div class="header-left col-md-3 col-md-offset-1"
+    h1 class="faux-button" Catch up with us
+  /! div class="header-right col-md-2 col-md-offset-4"
+    /! h3 Submit a post
+  = link_to "Submit a post", new_post_path, class: "header-right col-md-2 col-md-offset-4"
+
+section class="blog col-md-10 col-md-offset-1"
+  - @posts.each do |post|
+    div class="col-md-5"
+      h3 #{post.title}
+      h5 #{post.body}

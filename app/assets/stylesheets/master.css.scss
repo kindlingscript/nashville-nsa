@@ -52,3 +52,35 @@ $white: #fff;
 .btn-profile {
   margin-top: 25px;
 }
+
+.header {
+  margin-top: 5%;
+}
+
+.header-left {
+  background-color: $blue;
+  color: $white;
+  padding: 0px 25px 15px;
+  text-align: center;
+}
+
+.header-right {
+  text-align: center;
+  padding-bottom: 10px;
+  border: 1px solid $blue;
+  border-radius: 5px;
+  color: $blue;
+  font-size: 24px;
+  padding-top: 8px;
+  transition: all 0.5s ease;
+
+    &:hover {
+      text-decoration: none;
+      color: $white;
+      background-color: $blue;
+    }
+}
+
+.blog {
+  margin-top: 3%;
+}
