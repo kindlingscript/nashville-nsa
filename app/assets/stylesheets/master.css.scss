@@ -68,7 +68,6 @@ $white: #fff;
   text-align: center;
   padding-bottom: 10px;
   border: 1px solid $blue;
-  border-radius: 5px;
   color: $blue;
   font-size: 24px;
   padding-top: 8px;
@@ -83,4 +82,43 @@ $white: #fff;
 
 .blog {
   margin-top: 3%;
+}
+
+.body-format {
+  margin-top: 25px;
+  border-left: 1px solid #000;
+  padding-left: 10px;
+  font-weight: 400;
+}
+
+.section {
+  margin-bottom: 10%;
+}
+
+.section-boxes {
+  padding: 15px;
+  margin-top: 5%;
+}
+
+.section-header-font {
+  font-size: 36px;
+  font-weight: 300;
+  color: $blue;
+  padding-bottom: 10px;
+  border-bottom: 1px solid $blue;
+  letter-spacing: 1.5px;
+
+  &:hover {
+    text-decoration: none;
+    color: $blue;
+    font-weight: 400;
+    border-bottom: 2px solid $blue;
+  }
+}
+
+.base-font {
+  margin-top: 35px;
+  font-size: 20px;
+  line-height: 33px;
+  text-align: justify;
 }
