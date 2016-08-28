@@ -1,2 +1,8 @@
-h1 #{@post.title}
-h3 #{@post.body}
+- require 'sanitize'
+
+section class="blog-show col-md-6 col-md-offset-3"
+  h1 #{@post.title}
+  h4 class="by-line" by #{@post.user.firstname} #{@post.user.lastname}</span>
+  p class="body"
+    == Sanitize.fragment(@post.body, Sanitize::Config::RELAXED)
+  p class="closing" posted on 8/22/16 | 1 comment

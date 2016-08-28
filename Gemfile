@@ -11,6 +11,10 @@ gem 'bootstrap-sass', '~> 3.3.6'
 gem 'devise', '=4.1.1'
 # Use Simple Form
 gem 'simple_form'
+# Use sanitize
+gem 'sanitize'
+# Use bootstrap-wysihtml5 for blog posting
+gem 'bootstrap-wysihtml5-rails'
 # Use SCSS for stylesheets
 gem 'sass-rails', '>= 3.2'
 # Use Slim

@@ -122,3 +122,31 @@ $white: #fff;
   line-height: 33px;
   text-align: justify;
 }
+
+.blog-show {
+  margin-top: 5%;
+
+    h1 {
+      font-weight: 400;
+      margin-bottom: 0;
+    }
+
+    .body, .closing {
+      font-size: 16px;
+    }
+
+    .body {
+      margin-top: 35px;
+      text-align: justify;
+    }
+}
+
+.by-line {
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.closing {
+  text-align: right;
+  margin-top: 35px;
+}
