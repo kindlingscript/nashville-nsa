@@ -127,6 +127,7 @@ $white: #fff;
   margin-top: 5%;
 
     h1 {
+      font-size: 48px;
       font-weight: 400;
       margin-bottom: 0;
     }
@@ -149,4 +150,15 @@ $white: #fff;
 .closing {
   text-align: right;
   margin-top: 35px;
+}
+
+a[data-wysihtml5-command-value="h1"],
+a[data-wysihtml5-command="small"],
+a[data-wysihtml5-command-value="blockquote"],
+a[data-wysihtml5-command="Outdent"] {
+  display: none !important;
+}
+
+.posts-style {
+  margin-bottom: 5%;
 }

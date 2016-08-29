@@ -1,3 +1,5 @@
+- require 'sanitize'
+
 section class="header"
   div class="header-left col-md-3 col-md-offset-1"
     h1 Catch up with us
@@ -5,6 +7,16 @@ section class="header"
 
 section class="blog col-md-10 col-md-offset-1"
   - @posts.each do |post|
-    div class="col-md-5"
-      h3 #{post.title} by #{post.user.firstname} #{post.user.lastname}
-      h5 class="body-format" #{post.body}
+    div class="col-md-6 posts-style"
+      h2 #{post.title}
+      h5 by #{post.user.firstname} #{post.user.lastname}
+      h4 class="body-format"
+        - excerpt = Sanitize.fragment(post.body,
+          :elements => ['b', 'a', 'i', 'u', 'ul', 'ol', 'li', 'blockquote', 'div', 'h2', 'h3', 'h4', 'h5', 'h6' 'br', 'img' ],
+          :attributes => {'a' => ['href', 'title', 'target']},
+          :protocols => {'a' => {'href' => ['http', 'https']}},
+          :whitespace_elements => {'br' => { :before => "\n", :after => ""}, 'div' => { :before => "\n", :after => "\n" }, 'p' => { :before => "\n", :after => "\n" }})
+        == truncate(excerpt, length: 400, escape: false)
+        br
+        br
+        == link_to 'Read more...', post_path(post)

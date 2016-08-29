@@ -4,5 +4,8 @@ section class="blog-show col-md-6 col-md-offset-3"
   h1 #{@post.title}
   h4 class="by-line" by #{@post.user.firstname} #{@post.user.lastname}</span>
   p class="body"
-    == Sanitize.fragment(@post.body, Sanitize::Config::RELAXED)
+    == Sanitize.fragment(@post.body,
+    :elements => ['b','a', 'i', 'u', 'ul', 'ol', 'li', 'blockquote', 'div', 'h1', 'h2', 'br' ],
+    :attributes => {'a' => ['href', 'title', 'target']},
+    :protocols => {'a' => {'href' => ['http', 'https']}})
   p class="closing" posted on 8/22/16 | 1 comment

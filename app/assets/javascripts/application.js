@@ -22,7 +22,3 @@ $(document).ready(function(){
     $(elem).wysihtml5();
   });
 });
-
-$(document).on('page:load', function(){
-  window['rangy'].initialized = false
-});
