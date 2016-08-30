@@ -1,22 +1,17 @@
 - require 'sanitize'
 
-section class="header"
-  div class="header-left col-md-3 col-md-offset-1"
-    h1 Catch up with us
-  = link_to "Submit a post", new_post_path, class: "header-right col-md-2 col-md-offset-4"
-
-section class="blog col-md-10 col-md-offset-1"
-  - @posts.each do |post|
-    div class="col-md-6 posts-style"
+- @posts.each do |post|
+    section class="blog-show col-md-6 col-md-offset-3"
       h2 #{post.title}
       h5 by #{post.user.firstname} #{post.user.lastname}
       h4 class="body-format"
-        - excerpt = Sanitize.fragment(post.body,
+        == Sanitize.fragment(post.body,
           :elements => ['b', 'a', 'i', 'u', 'ul', 'ol', 'li', 'blockquote', 'div', 'h2', 'h3', 'h4', 'h5', 'h6' 'br', 'img' ],
           :attributes => {'a' => ['href', 'title', 'target']},
           :protocols => {'a' => {'href' => ['http', 'https']}},
           :whitespace_elements => {'br' => { :before => "\n", :after => ""}, 'div' => { :before => "\n", :after => "\n" }, 'p' => { :before => "\n", :after => "\n" }})
-        == truncate(excerpt, length: 400, escape: false)
-        br
-        br
-        == link_to 'Read more...', post_path(post), class: 'read-more'
+      br
+      == link_to "Edit post", edit_admin_post_path(post), class: 'btn btn-primary'
+
+section class="footer col-md-6 col-md-offset-3"
+  h1 End of posts to review!

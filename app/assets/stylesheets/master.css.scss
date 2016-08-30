@@ -55,6 +55,7 @@ $white: #fff;
 
 .header {
   margin-top: 5%;
+  margin-bottom: 5%;
 }
 
 .header-left {
@@ -81,14 +82,15 @@ $white: #fff;
 }
 
 .blog {
-  margin-top: 3%;
+  margin-top: 5%;
 }
 
 .body-format {
   margin-top: 25px;
   border-left: 1px solid #000;
-  padding-left: 10px;
-  font-weight: 400;
+  padding-left: 15px;
+  font-weight: 300;
+  font-size: 16px;
 }
 
 .section {
@@ -153,6 +155,7 @@ $white: #fff;
 }
 
 a[data-wysihtml5-command-value="h1"],
+a[data-wysihtml5-command-value="h2"],
 a[data-wysihtml5-command="small"],
 a[data-wysihtml5-command-value="blockquote"],
 a[data-wysihtml5-command="Outdent"] {
@@ -161,4 +164,25 @@ a[data-wysihtml5-command="Outdent"] {
 
 .posts-style {
   margin-bottom: 5%;
+
+    h2 {
+      font-weight: 400;
+
+      &:hover {
+        color: $blue;
+      }
+    }
+
+    h5 {
+      font-weight: 300;
+    }
+
+    .read-more {
+      color: $blue;
+    }
+}
+
+.footer {
+  margin: 7% 0 5% 0;
+  text-align: center;
 }

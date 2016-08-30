@@ -5,6 +5,9 @@ Rails.application.routes.draw do
   get 'users/:username', to: 'users#show', as: :user
   resources :posts
   get 'blog', to: 'posts#index', as: :blog
+  namespace :admin do
+    resources :posts, only: [:index, :create, :show, :edit, :delete]
+  end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
