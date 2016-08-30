@@ -7,4 +7,8 @@ class Admin::PostsController < ApplicationController
   def index
     @posts = Post.pending.all
   end
+
+  def edit
+    @post = Post.find(params[:id])
+  end
 end
