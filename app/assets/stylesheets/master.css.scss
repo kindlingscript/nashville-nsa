@@ -5,6 +5,10 @@ $white: #fff;
   height: 100px;
 }
 
+.nav-style {
+  border-right: 1px solid $blue;
+}
+
 .hero {
   background: url('nashville.jpg') no-repeat 0% 50%;
     -webkit-background-size: cover;

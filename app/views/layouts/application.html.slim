@@ -30,13 +30,15 @@ html lang="en"
           ul.nav.navbar-nav.navbar-right
             - if user_signed_in?
               li
-                = link_to "My profile", user_path(current_user.username)
+                = link_to "My profile", user_path(current_user.username), class: "nav-style"
+              li
+                = link_to "Blog", blog_path, class: "nav-style"
               li
                 = link_to "Log out", destroy_user_session_path, method: :delete
             - else
               li class="sign-in"
                 span
-                  = link_to "Create an account", new_user_registration_path
+                  = link_to "Create an account", new_user_registration_path, class: "nav-style"
               li
                 = link_to "Log in", new_user_session_path
 

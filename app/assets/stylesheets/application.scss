@@ -58,11 +58,16 @@
 
  ul.nav.navbar-nav.navbar-right {
 
+   li a:hover {
+     background: $blue;
+     color: $white;
+   }
+
    li.sign-in a {
      border: 1px solid $blue;
      border-radius: 5px;
      color: $blue;
-     padding: 10px 15px;
+     padding: 10px 20px;
      position: relative;
      top: 35px;
      right: 10px;
