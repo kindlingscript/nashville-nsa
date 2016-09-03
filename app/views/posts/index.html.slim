@@ -12,10 +12,10 @@ section class="blog col-md-10 col-md-offset-1"
       h5 by #{post.user.firstname} #{post.user.lastname}
       h4 class="body-format"
         - excerpt = Sanitize.fragment(post.body,
-          :elements => ['b', 'a', 'i', 'u', 'ul', 'ol', 'li', 'blockquote', 'div', 'h2', 'h3', 'h4', 'h5', 'h6' 'br', 'img' ],
+          :elements => ['b', 'br', 'a', 'i', 'u', 'ul', 'ol', 'li', 'blockquote', 'div', 'h2', 'h3', 'h4', 'h5', 'h6' 'br', 'img' ],
           :attributes => {'a' => ['href', 'title', 'target']},
           :protocols => {'a' => {'href' => ['http', 'https']}},
-          :whitespace_elements => {'br' => { :before => "\n", :after => ""}, 'div' => { :before => "\n", :after => "\n" }, 'p' => { :before => "\n", :after => "\n" }})
+          :whitespace_elements => {'br' => { :before => "\n", :after => "\n"}, 'div' => { :before => "\n", :after => "\n" }, 'p' => { :before => "\n", :after => "\n" }})
         == truncate(excerpt, length: 400, escape: false)
         br
         br

@@ -21,7 +21,8 @@ class PostsController < ApplicationController
 
   def update
     @post = Post.find(params[:id])
-    @post.update_attribute(:postreview, false)
+    @post.update_attributes(post_params)
+    @post.update(postreview: false)
     redirect_to blog_path
   end
 
