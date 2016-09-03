@@ -30,7 +30,7 @@ html lang="en"
           ul.nav.navbar-nav.navbar-right
             - if user_signed_in?
               li
-                = link_to "My profile", user_path(current_user.username), class: "nav-style"
+                = link_to "My profile", profile_path(current_user.username), class: "nav-style"
               li
                 = link_to "Blog", blog_path, class: "nav-style"
               li

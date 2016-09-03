@@ -15,6 +15,8 @@ gem 'simple_form'
 gem 'sanitize'
 # Use bootstrap-wysihtml5 for blog posting
 gem 'bootstrap-wysihtml5-rails'
+# Use carrierwave for photos
+gem 'carrierwave'
 # Use SCSS for stylesheets
 gem 'sass-rails', '>= 3.2'
 # Use Slim

@@ -1,8 +1,13 @@
 Rails.application.routes.draw do
   devise_for :users, controllers: { registrations: 'users/registrations' }
   root to: 'static_pages#index'
-  # resources :users, only: :show
-  get 'users/:username', to: 'users#show', as: :user
+  # resources :users do
+  #   resources :photos, :only => :create
+  # end
+  get 'users/:username', to: 'users#show', as: :profile
+  resources :users do
+    resources :photos, :only => :create
+  end
   resources :posts
   get 'blog', to: 'posts#index', as: :blog
   namespace :admin do

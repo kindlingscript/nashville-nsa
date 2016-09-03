@@ -7,3 +7,17 @@ section class="standard-boxes col-md-6 col-md-offset-2"
 
 section class="standard-boxes col-md-3"
   = image_tag('user_blank.png', width: '175')
+  br
+  br
+  button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" Add profile picture
+
+div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  div class="modal-dialog" role="document"
+    div class="modal-content"
+      div class="modal-header"
+        button type="button" class="close" data-dismiss="modal" aria-label="Close" span-aria-hidden="true" &times;
+        h4 class="modal-title" id="myModalLabel" Add a profile picture
+        div class="modal-body"
+          == simple_form_for @photo, :url => user_photos_path(@user) do |f|
+            == f.input :avatar
+            == f.submit "Upload", :class => "btn btn-primary"
