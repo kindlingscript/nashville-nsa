@@ -17,6 +17,8 @@ gem 'sanitize'
 gem 'bootstrap-wysihtml5-rails'
 # Use carrierwave for photos
 gem 'carrierwave'
+# Use MiniMagick
+gem 'mini_magick'
 # Use SCSS for stylesheets
 gem 'sass-rails', '>= 3.2'
 # Use Slim
