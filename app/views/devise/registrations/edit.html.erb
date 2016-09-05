@@ -19,7 +19,7 @@
       <br>
       <%= f.input :location, required: false %>
       <br>
-      <%= f.input :birthday, required: false, start_year: Date.today.year - 14, end_year: Date.today.year - 85%>
+      <%= f.input :birthday, required: false, start_year: Date.today.year - 14, end_year: Date.today.year - 85, class: "col-xs-3"%>
       <br>
       <%= f.input :password, autocomplete: "off", hint: "leave it blank if you don't want to change it", required: false %>
       <br>

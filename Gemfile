@@ -13,6 +13,8 @@ gem 'devise', '=4.1.1'
 gem 'simple_form'
 # Use sanitize
 gem 'sanitize'
+# Use figaro
+gem 'figaro'
 # Use bootstrap-wysihtml5 for blog posting
 gem 'bootstrap-wysihtml5-rails'
 # Use carrierwave for photos
