@@ -3,4 +3,5 @@ class Post < ActiveRecord::Base
   scope :pending, -> { where(:postreview => true) }
 
   belongs_to :user
+  has_many :comments
 end
