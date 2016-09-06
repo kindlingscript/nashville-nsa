@@ -1,8 +1,15 @@
 section class="standard-boxes col-md-6 col-md-offset-2"
   h1 #{@user.username}'s profile
-  h4 class="real-name" #{@user.firstname} #{@user.lastname}
-  h5 class="birthday" Born on #{@user.birthday.to_time.strftime('%B %d, %Y')}
-  h5 class="location" Lives in #{@user.location}
+  - if (@user.firstname.present? && @user.lastname.present?)
+    h4 class="real-name" #{@user.firstname} #{@user.lastname}
+  - else
+    h4 class="real-name"
+      |
+        #{@user.firstname}
+  - if @user.birthday.present?
+    h5 class="birthday" Born on #{@user.birthday.to_time.strftime('%B %d, %Y')}
+  - if @user.location.present?
+    h5 class="location" Lives in #{@user.location}
   = link_to 'Edit/add user info', edit_user_registration_path, class: 'btn btn-primary btn-profile'
 
 section class="standard-boxes col-md-3"
