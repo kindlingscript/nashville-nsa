@@ -102,7 +102,42 @@
    border: none;
  }
 
-@media (min-width: 992px) {
+ .section-left {
+   margin-left: 5%;
+ }
+
+ label.date.optional {
+   display: block;
+ }
+
+ a {
+   color: $blue;
+ }
+
+@media only screen and (min-width: 450px) and (max-width: 650px) {
+  .navbar-default .navbar-toggle {
+    margin-top: 30px;
+    border-color: $blue;
+
+      &:hover, &:focus {
+        background-color: $blue;
+        .icon-bar {
+          background-color: $white;
+        }
+      }
+
+      .icon-bar {
+        background-color: $blue;
+      }
+  }
+
+  .navbar-collapse.collapse.in {
+    margin-top: 15px;
+    border-color: $blue;
+  }
+}
+
+@media only screen and (min-width: 992px) {
   .col-md-offset-4 {
     margin-left: 38%;
   }
@@ -111,12 +146,4 @@
     padding-left: 30px;
     padding-right: 30px;
   }
-}
-
-.section-left {
-  margin-left: 5%;
-}
-
-label.date.optional {
-  display: block;
 }

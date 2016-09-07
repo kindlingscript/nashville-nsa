@@ -90,9 +90,16 @@ $white: #fff;
 }
 
 .body-format {
-  margin-top: 25px;
   border-left: 1px solid #000;
   padding-left: 15px;
+}
+
+.body-show {
+  line-height: 30px;
+}
+
+.body-format, .body-show {
+  margin-top: 25px;
   font-weight: 300;
   font-size: 16px;
 }
@@ -149,6 +156,9 @@ $white: #fff;
 
     .closing {
       margin-bottom: 15%;
+      font-weight: 400;
+      color: $blue;
+      font-style: italic;
     }
 }
 
@@ -197,4 +207,22 @@ a[data-wysihtml5-command="Outdent"] {
 
 .comments {
   margin-top: 5%;
+}
+
+@media only screen and (min-width: 450px) and (max-width: 650px) {
+  .intro {
+    margin-top: 30%;
+    padding: 2.5rem;
+
+    h1 {
+      font-size: 32px;
+      text-shadow: -1px 1px 1px rgba(70, 70, 70, 1);
+      text-align: center;
+    }
+  }
+
+  .hero-button {
+    margin-left: 25%;
+    margin-top: 5%;
+  }
 }
