@@ -15,6 +15,8 @@ gem 'simple_form'
 gem 'sanitize'
 # Use figaro
 gem 'figaro'
+# Use friendly id
+gem 'friendly_id', '~> 5.1.0'
 # Use bootstrap-wysihtml5 for blog posting
 gem 'bootstrap-wysihtml5-rails'
 # Use carrierwave for photos

@@ -16,8 +16,7 @@ class PostsController < ApplicationController
   end
 
   def show
-    @post = Post.find(params[:id])
-    @comment = Comment.new
+    @post = Post.friendly.find(params[:id])
   end
 
   def update
@@ -30,7 +29,7 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:title, :body, :postreview)
+    params.require(:post).permit(:title, :body, :postreview, :slug)
   end
 
   def check_if_admin!
