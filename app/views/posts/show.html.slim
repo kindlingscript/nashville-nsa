@@ -11,8 +11,4 @@ section class="blog-show col-md-6 col-md-offset-3"
       :whitespace_elements => {'br' => { :before => "\n", :after => "\n"}, 'div' => { :before => "\n", :after => "\n" }, 'p' => { :before => "\n", :after => "\n" }})
   p class="closing" posted on 8/22/16 | 1 comment
 
-section class="comments col-md-6 col-md-offset-3"
-  = simple_form_for @comment, url: '#' do |f|
-    = f.input :message, :label => "Reply to this post"
-    br
-    = f.submit "Post comment", class: "btn btn-success"
+  == render 'disqus'

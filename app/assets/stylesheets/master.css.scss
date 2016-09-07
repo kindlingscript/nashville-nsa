@@ -130,7 +130,7 @@ $white: #fff;
 }
 
 .blog-show {
-  margin-top: 5%;
+  margin: 5% 0;
 
     h1 {
       font-size: 48px;
@@ -145,6 +145,10 @@ $white: #fff;
     .body {
       margin-top: 35px;
       text-align: justify;
+    }
+
+    .closing {
+      margin-bottom: 15%;
     }
 }
 
