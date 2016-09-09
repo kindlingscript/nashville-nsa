@@ -21,4 +21,11 @@ $(document).ready(function(){
   $('.wysihtml5').each(function(i, elem) {
     $(elem).wysihtml5();
   });
+
+  var windowSize = $(window).width();
+  if (windowSize < 768) {
+    $('.span-child').unwrap();
+  } else {
+    $('.span-child').wrap();
+  }
 });
