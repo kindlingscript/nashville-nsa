@@ -215,7 +215,7 @@ a[data-wysihtml5-command="Outdent"] {
 
 @media only screen and (min-width: 370px) and (max-width: 650px) {
   .intro {
-    margin-top: 30%;
+    margin-top: 10rem;
     padding: 2.5rem;
 
     h1 {
@@ -228,5 +228,9 @@ a[data-wysihtml5-command="Outdent"] {
   .hero-button {
     margin-left: 25%;
     margin-top: 5%;
+  }
+
+  .section-header-font {
+    line-height: 70px;
   }
 }
