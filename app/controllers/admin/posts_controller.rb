@@ -9,14 +9,7 @@ class Admin::PostsController < ApplicationController
   end
 
   def edit
-    @post = Post.find(params[:id])
-  end
-
-  def update
-    @post = Post.find(params[:id])
-    @post.update_attributes(post_params)
-    @post.update(postreview: false)
-    redirect_to blog_path
+    @post = Post.friendly.find(params[:id])
   end
 
   private

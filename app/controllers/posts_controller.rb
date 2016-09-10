@@ -20,7 +20,7 @@ class PostsController < ApplicationController
   end
 
   def update
-    @post = Post.find(params[:id])
+    @post = Post.friendly.find(params[:id])
     @post.update_attributes(post_params)
     @post.update(postreview: false)
     redirect_to blog_path
