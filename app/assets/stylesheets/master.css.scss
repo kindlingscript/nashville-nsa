@@ -213,9 +213,35 @@ a[data-wysihtml5-command="Outdent"] {
   font-weight: 300;
 }
 
-@media only screen and (min-width: 370px) and (max-width: 650px) {
+@media only screen and (min-width: 300px) and (max-width: 450px) {
   .intro {
-    margin-top: 10rem;
+    margin-top: 8rem;
+
+    h1 {
+      font-size: 25px;
+      text-shadow: -1px 1px 1px rgba(70, 70, 70, 1);
+      text-align: center;
+    }
+  }
+
+  .hero-button {
+    margin-top: 1em;
+  }
+
+  .section-header-font {
+    font-size: 26px;
+    padding-bottom: 3px;
+  }
+
+  .base-font {
+    font-size: 15px;
+  }
+}
+
+// was 370 for min before
+@media only screen and (min-width: 451px) and (max-width: 650px) {
+  .intro {
+    margin-top: 8rem;
     padding: 2.5rem;
 
     h1 {
