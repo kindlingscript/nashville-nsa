@@ -118,6 +118,11 @@
    margin-left: -5px;
  }
 
+ .post-margin {
+   margin-left: 3em;
+   margin-right: 2em;
+ }
+
 @media only screen and (max-width: 767px) {
   .navbar-default .navbar-toggle {
     margin-top: 30px;
@@ -160,6 +165,10 @@
 @media only screen and (min-width: 992px) {
   .col-md-offset-4 {
     margin-left: 38%;
+  }
+
+  .blog.col-md-10 {
+    margin-left: 90px;
   }
 
   nav.navbar.navbar-default > .container-fluid {

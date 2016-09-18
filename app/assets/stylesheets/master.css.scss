@@ -1,5 +1,6 @@
 $blue: #0197F5;
 $white: #fff;
+$normal-font: 16px;
 
 .navbar-nav > li > a, .navbar-brand {
   height: 100px;
@@ -92,6 +93,8 @@ $white: #fff;
 .body-format {
   border-left: 1px solid #000;
   padding-left: 15px;
+  line-height: 25px;
+  text-align: justify;
 }
 
 .body-show {
@@ -213,6 +216,16 @@ a[data-wysihtml5-command="Outdent"] {
   font-weight: 300;
 }
 
+.date {
+  text-align: right;
+  margin-top: 2em;
+  font-weight: 300;
+}
+
+.posts-index {
+  margin-bottom: 6em;
+}
+
 @media only screen and (min-width: 300px) and (max-width: 450px) {
   .intro {
     margin-top: 8rem;
@@ -238,7 +251,6 @@ a[data-wysihtml5-command="Outdent"] {
   }
 }
 
-// was 370 for min before
 @media only screen and (min-width: 451px) and (max-width: 650px) {
   .intro {
     margin-top: 8rem;
@@ -258,5 +270,15 @@ a[data-wysihtml5-command="Outdent"] {
 
   .section-header-font {
     line-height: 70px;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .header-right {
+    margin-top: 1.5em;
+  }
+
+  .posts-style {
+    margin-bottom: 5em;
   }
 }

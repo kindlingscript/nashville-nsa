@@ -1,22 +1,42 @@
 - require 'sanitize'
 
 section class="header"
-  div class="header-left col-md-3 col-md-offset-1"
+  div class="header-left col-md-3  col-md-offset-1 col-xs-10 col-xs-offset-1"
     h1 Catch up with us
-  = link_to "Submit a post", new_post_path, class: "header-right col-md-2 col-md-offset-4"
+  = link_to "Submit a post", new_post_path, class: "header-right col-md-2 col-md-offset-4 col-xs-5 col-xs-offset-3"
+  div class="clearfix"
 
-section class="blog col-md-10 col-md-offset-1"
-  - @posts.each do |post|
-    div class="col-md-6 posts-style"
-      h2 #{post.title}
-      h5 by #{post.user.firstname} #{post.user.lastname}
-      h4 class="body-format"
-        - excerpt = Sanitize.fragment(post.body,
-          :elements => ['b', 'br', 'a', 'i', 'u', 'ul', 'ol', 'li', 'blockquote', 'div', 'h2', 'h3', 'h4', 'h5', 'h6' 'br', 'img' ],
-          :attributes => {'a' => ['href', 'title', 'target']},
-          :protocols => {'a' => {'href' => ['http', 'https']}},
-          :whitespace_elements => {'br' => { :before => "\n", :after => "\n"}, 'div' => { :before => "\n", :after => "\n" }, 'p' => { :before => "\n", :after => "\n" }})
-        == truncate(excerpt, length: 400, escape: false)
-        br
-        br
-        == link_to 'Read more...', post_path(post), class: 'read-more'
+section class="blog col-xs-10 col-xs-offset-1"
+  - @posts.in_groups_of(2) do |post1, post2|
+    div class="row posts-index"
+      div class="col-md-5 col-xs-10 col-xs-offset-1 post-margin posts-style"
+        h2 #{post1.title}
+        h5 by #{post1.user.firstname} #{post1.user.lastname}
+        h4 class="body-format"
+          - excerpt = Sanitize.fragment(post1.body,
+            :elements => ['b', 'br', 'a', 'i', 'u', 'ul', 'ol', 'li', 'blockquote', 'div', 'h2', 'h3', 'h4', 'h5', 'h6' 'br', 'img' ],
+            :attributes => {'a' => ['href', 'title', 'target']},
+            :protocols => {'a' => {'href' => ['http', 'https']}},
+            :whitespace_elements => {'br' => { :before => "\n", :after => "\n"}, 'div' => { :before => "\n", :after => "\n" }, 'p' => { :before => "\n", :after => "\n" }})
+          == truncate(excerpt, length: 400, escape: false)
+          br
+          br
+          == link_to 'Read more...', post_path(post1), class: 'read-more'
+        p class="date" posted on #{post1.created_at.to_time.strftime('%B %d, %Y')}
+
+      - if post2
+
+        div class="col-md-5 col-md-offset-1 col-xs-10 col-xs-offset-1 posts-style"
+          h2 #{post2.title}
+          h5 by #{post2.user.firstname} #{post2.user.lastname}
+          h4 class="body-format"
+            - excerpt = Sanitize.fragment(post2.body,
+              :elements => ['b', 'br', 'a', 'i', 'u', 'ul', 'ol', 'li', 'blockquote', 'div', 'h2', 'h3', 'h4', 'h5', 'h6' 'br', 'img' ],
+              :attributes => {'a' => ['href', 'title', 'target']},
+              :protocols => {'a' => {'href' => ['http', 'https']}},
+              :whitespace_elements => {'br' => { :before => "\n", :after => "\n"}, 'div' => { :before => "\n", :after => "\n" }, 'p' => { :before => "\n", :after => "\n" }})
+            == truncate(excerpt, length: 400, escape: false)
+            br
+            br
+            == link_to 'Read more...', post_path(post2), class: 'read-more'
+          p class="date" posted on #{post2.created_at.to_time.strftime('%B %d, %Y')}
