@@ -1,7 +1,7 @@
 $blue: #0197F5;
 $white: #fff;
-$normal-font: 16px;
 
+/* Header and navbar sections */
 .navbar-nav > li > a, .navbar-brand {
   height: 100px;
 }
@@ -10,6 +10,7 @@ $normal-font: 16px;
   border-right: 1px solid $blue;
 }
 
+/* Hero section */
 .hero {
   background: url('nashville.jpg') no-repeat 0% 50%;
     -webkit-background-size: cover;
@@ -37,6 +38,7 @@ $normal-font: 16px;
   font-size: 22px;
 }
 
+/* In Devise user registration / sign-in / etc. */
 .user-boxes {
   margin-top: 30px;
   margin-bottom: 15px;
@@ -44,6 +46,7 @@ $normal-font: 16px;
   background: $white;
 }
 
+/* For new posts and user profile */
 .standard-boxes {
   padding: 15px;
   margin-top: 50px;
@@ -58,6 +61,7 @@ $normal-font: 16px;
   margin-top: 25px;
 }
 
+/* Headers on blog index page */
 .header {
   margin-top: 5%;
   margin-bottom: 5%;
@@ -86,6 +90,7 @@ $normal-font: 16px;
     }
 }
 
+/* For blog / blog posts in index & show pages */
 .blog {
   margin-top: 5%;
 }
@@ -95,6 +100,7 @@ $normal-font: 16px;
   padding-left: 15px;
   line-height: 25px;
   text-align: justify;
+  letter-spacing: 1px;
 }
 
 .body-show {
@@ -107,6 +113,7 @@ $normal-font: 16px;
   font-size: 16px;
 }
 
+/* Sections on landing page */
 .section {
   margin-bottom: 10%;
 }
@@ -139,6 +146,7 @@ $normal-font: 16px;
   text-align: justify;
 }
 
+/* Showing a individual blog post */
 .blog-show {
   margin: 5% 0;
 
@@ -162,6 +170,8 @@ $normal-font: 16px;
       font-weight: 400;
       color: $blue;
       font-style: italic;
+      text-align: right;
+      margin-top: 35px;
     }
 }
 
@@ -170,21 +180,22 @@ $normal-font: 16px;
   font-weight: 300;
 }
 
-.closing {
-  text-align: right;
-  margin-top: 35px;
-}
-
+/* Modifying the wysihtml5 editor */
 a[data-wysihtml5-command-value="h1"],
 a[data-wysihtml5-command-value="h2"],
+a[data-wysihtml5-command-value="h3"],
 a[data-wysihtml5-command="small"],
 a[data-wysihtml5-command-value="blockquote"],
-a[data-wysihtml5-command="Outdent"] {
+a[data-wysihtml5-command="Outdent"],
+a[data-wysihtml5-command="Indent"]
+ {
   display: none !important;
 }
 
+/* Adding styles to posts on blog index page */
 .posts-style {
   margin-bottom: 5%;
+  padding-bottom: 1em;
 
     h2 {
       font-weight: 400;
@@ -200,6 +211,10 @@ a[data-wysihtml5-command="Outdent"] {
 
     .read-more {
       color: $blue;
+    }
+
+    &:hover {
+      box-shadow: 0px 3px 15px 0px rgba(107,107,107,0.3);
     }
 }
 
@@ -226,6 +241,17 @@ a[data-wysihtml5-command="Outdent"] {
   margin-bottom: 6em;
 }
 
+.by-line-index {
+  font-weight: 300;
+}
+
+.field_with_errors {
+  color: #ff3333;
+  border-radius: 3px;
+  padding: 8px;
+}
+
+/* MEDIA QUERIES */
 @media only screen and (min-width: 300px) and (max-width: 450px) {
   .intro {
     margin-top: 8rem;

@@ -9,6 +9,6 @@ section class="blog-show col-md-6 col-md-offset-3"
       :attributes => {'a' => ['href', 'title', 'target']},
       :protocols => {'a' => {'href' => ['http', 'https']}},
       :whitespace_elements => {'br' => { :before => "\n", :after => "\n"}, 'div' => { :before => "\n", :after => "\n" }, 'p' => { :before => "\n", :after => "\n" }})
-  p class="closing" posted on 8/22/16
+  p class="closing" posted on #{@post.created_at.to_time.strftime('%B %d, %Y')}
 
   == render 'disqus'

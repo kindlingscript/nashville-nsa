@@ -11,10 +11,10 @@ section class="blog col-xs-10 col-xs-offset-1"
     div class="row posts-index"
       div class="col-md-5 col-xs-10 col-xs-offset-1 post-margin posts-style"
         h2 #{post1.title}
-        h5 by #{post1.user.firstname} #{post1.user.lastname}
+        h4 class="by-line-index" by #{post1.user.firstname} #{post1.user.lastname}
         h4 class="body-format"
           - excerpt = Sanitize.fragment(post1.body,
-            :elements => ['b', 'br', 'a', 'i', 'u', 'ul', 'ol', 'li', 'blockquote', 'div', 'h2', 'h3', 'h4', 'h5', 'h6' 'br', 'img' ],
+            :elements => ['b', 'br', 'a', 'i', 'u', 'ul', 'ol', 'li', 'blockquote', 'div', 'h4', 'h5', 'h6' 'br', 'img' ],
             :attributes => {'a' => ['href', 'title', 'target']},
             :protocols => {'a' => {'href' => ['http', 'https']}},
             :whitespace_elements => {'br' => { :before => "\n", :after => "\n"}, 'div' => { :before => "\n", :after => "\n" }, 'p' => { :before => "\n", :after => "\n" }})
@@ -28,7 +28,7 @@ section class="blog col-xs-10 col-xs-offset-1"
 
         div class="col-md-5 col-md-offset-1 col-xs-10 col-xs-offset-1 posts-style"
           h2 #{post2.title}
-          h5 by #{post2.user.firstname} #{post2.user.lastname}
+          h4 class="by-line-index" by #{post2.user.firstname} #{post2.user.lastname}
           h4 class="body-format"
             - excerpt = Sanitize.fragment(post2.body,
               :elements => ['b', 'br', 'a', 'i', 'u', 'ul', 'ol', 'li', 'blockquote', 'div', 'h2', 'h3', 'h4', 'h5', 'h6' 'br', 'img' ],
