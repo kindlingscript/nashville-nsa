@@ -3,7 +3,8 @@ class PostsController < ApplicationController
   before_action :check_if_admin!, :only => [:update]
 
   def index
-    @posts = Post.approved.all
+    # @posts = Post.approved.all
+    @posts = Post.approved.page params[:page]
   end
 
   def new

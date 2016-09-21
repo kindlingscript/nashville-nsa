@@ -13,6 +13,8 @@ gem 'devise', '=4.1.1'
 gem 'simple_form'
 # Use sanitize
 gem 'sanitize'
+# Use kaminari
+gem 'kaminari'
 # Use figaro
 gem 'figaro'
 # Use friendly id

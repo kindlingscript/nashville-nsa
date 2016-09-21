@@ -17,7 +17,7 @@
 //= require bootstrap-sprockets
 //= require bootstrap-wysihtml5
 
-$(document).ready(function(){
+$(document).ready(function() {
   $('.wysihtml5').each(function(i, elem) {
     $(elem).wysihtml5();
   });
@@ -27,5 +27,7 @@ $(document).ready(function(){
     $('.span-child').unwrap();
   } else {
     $('.span-child').wrap();
-  }
+  };
+
+  $('.approval-info').tooltip();
 });

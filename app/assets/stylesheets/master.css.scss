@@ -251,6 +251,11 @@ a[data-wysihtml5-command="Indent"]
   padding: 8px;
 }
 
+.approval-info[data-title]:hover:after {
+  font-style: italic;
+  color:gray;
+}
+
 /* MEDIA QUERIES */
 @media only screen and (min-width: 300px) and (max-width: 450px) {
   .intro {

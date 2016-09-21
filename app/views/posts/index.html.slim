@@ -40,3 +40,6 @@ section class="blog col-xs-10 col-xs-offset-1"
             br
             == link_to 'Read more...', post_path(post2), class: 'read-more'
           p class="date" posted on #{post2.created_at.to_time.strftime('%B %d, %Y')}
+
+  div class="col-sm-6 col-sm-offset-5 col-xs-10 col-xs-offset-1"
+    == paginate @posts
