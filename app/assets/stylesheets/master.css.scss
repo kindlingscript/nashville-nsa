@@ -130,6 +130,7 @@ $white: #fff;
   padding-bottom: 10px;
   border-bottom: 1px solid $blue;
   letter-spacing: 1.5px;
+  display: inline-block;
 
   &:hover {
     text-decoration: none;
@@ -251,9 +252,14 @@ a[data-wysihtml5-command="Indent"]
   padding: 8px;
 }
 
-.approval-info[data-title]:hover:after {
-  font-style: italic;
-  color:gray;
+#map {
+  width: 600px;
+  height: 400px;
+}
+
+.meeting {
+  margin-top: 4.5em;
+  margin-left: 3em;
 }
 
 /* MEDIA QUERIES */

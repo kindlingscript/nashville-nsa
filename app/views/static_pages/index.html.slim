@@ -11,3 +11,50 @@ section class="section container-fluid"
     p class="base-font"
       |
         Beyond our regular monthly meetings, our members make posts about their experiences with stuttering. Whether they themselves stutter, or they are or have been a SLP (speech-language pathologist), each person has had personal/professional experience with stuttering and offer unique insights of it. Feel free to read a few posts, comment on some, or submit your own!
+
+section class="section container-fluid"
+  div class="section-left section-boxes col-md-6 col-md-offset-1 col-xs-10 col-xs-offset-1"
+    div id="map"
+  div class="section-right section-boxes meeting col-md-4 col-xs-10"
+    h2 class="section-header-font" Where we meet
+    p class="base-font"
+      |
+        On the third Tuesday of each month, our chapter of the National Stuttering Association meets at Glen Leven Presbyterian Church off of Franklin Road in Nashville, TN. Meetings typically start at 6pm and end at around 8pm.
+    p class="base-font"
+      |
+        For more information, click on the red marker inside the map.
+
+javascript:
+  var map;
+  var myLatLng = {lat: 36.1049368, lng: -86.7709378};
+  function initMap() {
+    map = new google.maps.Map(document.getElementById('map'), {
+      center: myLatLng,
+      zoom: 15
+    });
+
+    var marker = new google.maps.Marker({
+      position: myLatLng,
+      map: map
+    });
+
+    var contentString = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h3 id="firstHeading" class="firstHeading">Glen Leven Presbyterian Church</h3>'+
+      '<div id="bodyContent">'+
+      '<p>3906 Franklin Pike, Nashville, TN 37204</p>'+
+      '<a href="https://www.google.com/maps/dir//Glen+Leven+Presbyterian+Church,+3906+Franklin+Pike,+Nashville,+TN+37204/@36.1049368,-86.7709378,15z/data=!4m15!1m6!3m5!1s0x0:0xc053fcd018c804f1!2sGlen+Leven+Presbyterian+Church!8m2!3d36.1049368!4d-86.7709378!4m7!1m0!1m5!1m1!1s0x886465ba083f5061:0xc053fcd018c804f1!2m2!1d-86.7709378!2d36.1049368" target="_blank">Get Directions</a> '+
+      '</div>'+
+      '</div>';
+
+      var infowindow = new google.maps.InfoWindow({
+      content: contentString
+    });
+
+      marker.addListener('click', function() {
+        infowindow.open(map, marker);
+    });
+  }
+
+script src="https://maps.googleapis.com/maps/api/js?key=#{ENV['MAPS_API_KEY']}&callback=initMap"
