@@ -17,6 +17,8 @@
  @import "bootstrap-sprockets";
  @import "bootstrap-wysihtml5/bootstrap3-wysihtml5";
  @import "bootstrap";
+ @import "font-awesome-sprockets";
+ @import "font-awesome";
 
  $blue: #0197F5;
  $white: #fff;
@@ -130,6 +132,11 @@
 
  .pagination > li > a, .pagination > li > span {
    color: $blue;
+ }
+
+ .fa {
+   display: block;
+   padding-top: 0.4em;
  }
 
 @media only screen and (max-width: 767px) {

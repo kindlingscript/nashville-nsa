@@ -17,6 +17,8 @@ gem 'sanitize'
 gem 'kaminari'
 # Use figaro
 gem 'figaro'
+# Use fontawesome
+gem 'font-awesome-sass', '~> 4.6.2'
 # Use friendly id
 gem 'friendly_id', '~> 5.1.0'
 # Use bootstrap-wysihtml5 for blog posting

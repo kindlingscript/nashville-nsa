@@ -24,6 +24,26 @@ section class="section container-fluid"
       |
         For more information, click on the red marker inside the map.
 
+section class="index-footer"
+  div class="links col-md-3 col-md-offset-1"
+    h4 For more information:
+    ul
+      li = link_to 'National Stuttering Association', 'http://westutter.org', target: '_blank'
+      li = link_to 'The Stuttering Foundation', 'http://www.stutteringhelp.org/', target: '_blank'
+      li = link_to 'Vanderbilt Bill Wilkerson Center', 'https://www.vanderbilthealth.com/billwilkerson/30037', target: '_blank'
+  div class="links motto col-md-4 col-md-offset-0"
+    h4 "If you stutter, you're not alone."
+  div class="links social col-md-2 col-md-offset-1"
+    h4 Find us elsewhere:
+    = link_to 'https://www.facebook.com/groups/185080364866448/', target: '_blank' do
+      == icon('facebook-official', class: 'fa-4x')
+
+  div class="clearfix"
+
+  div class="copyright"
+    = link_to '© 2016 kindlingscript', 'http://kindlingscript.com'
+
+
 javascript:
   var map;
   var myLatLng = {lat: 36.1049368, lng: -86.7709378};
