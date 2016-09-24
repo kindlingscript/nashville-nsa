@@ -271,6 +271,8 @@ p.inline {
   display: inline-block;
 }
 
+
+/* Footer section styles */
 .index-footer {
   padding: 2.5em;
   background-color: #0197f5;
@@ -359,15 +361,6 @@ p.inline {
   .base-font {
     font-size: 15px;
   }
-
-  #map {
-    width: 100%;
-    height: 300px;
-  }
-
-  .meeting {
-    margin-top: 0;
-  }
 }
 
 @media only screen and (min-width: 451px) and (max-width: 650px) {
@@ -390,7 +383,9 @@ p.inline {
   .section-header-font {
     line-height: 70px;
   }
+}
 
+@media only screen and (max-width: 650px) {
   #map {
     width: 100%;
     height: 300px;
@@ -398,6 +393,14 @@ p.inline {
 
   .meeting {
     margin-top: 0;
+  }
+
+  .more-info {
+    text-align: center;
+  }
+
+  .social {
+    margin-top: 5em;
   }
 }
 
@@ -408,5 +411,27 @@ p.inline {
 
   .posts-style {
     margin-bottom: 5em;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .meeting {
+    bottom: 25px;
+
+    h2 {
+      font-size: 26px;
+    }
+
+    .base-font {
+      font-size: 15px;
+      margin-top: 15px;
+    }
+  }
+}
+
+@media only screen and (max-width: 1345px) {
+  #map {
+    width: 100%;
+    height: 350px;
   }
 }
