@@ -1,8 +1,8 @@
-# National Stuttering Association - Nashville Chapter
+= National Stuttering Association - Nashville Chapter
 
 In short, this is the code that gets the Nashville chapter of the NSA's website up and running.
 
-## What's This App Do?
+== What's This App Do?
 
 With this initial version, the main purpose is to host a community blog and get the group a web presence. In the future, more will likely be added and altered.
 
@@ -10,11 +10,11 @@ For now, users can sign up with a username, email, password, plus their first an
 
 Once their email is confirmed, users can submit blog posts for administrators to approve (grammar is checked, any typos fixed, etc). People can also comment on posts through Disqus.
 
-## Favorite New Gems
+== Favorite New Gems
 
 These were a few of the gems that were especially useful in creating this app, ones that I hadn't used before:
 
-* slim to get experience with it
-* friendly_id for putting slugs into individual post urls, replacing id #s
-* bootstrap-wysihtml5-rails so users can easily create blog posts
-* sanitize to properly format submitted posts
+* slim[https://github.com/slim-template/slim] to get experience with it
+* friendly_id[https://github.com/norman/friendly_id] for putting slugs into individual post urls, replacing id #s
+* bootstrap-wysihtml5-rails[https://github.com/Nerian/bootstrap-wysihtml5-rails] so users can easily create blog posts
+* sanitize[https://github.com/rgrove/sanitize] to properly format submitted posts
