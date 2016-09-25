@@ -61,7 +61,7 @@ $white: #fff;
   margin-top: 25px;
 }
 
-/* Headers on blog index page */
+/* Top headers on blog index page */
 .header {
   margin-top: 5%;
   margin-bottom: 5%;
@@ -124,7 +124,7 @@ $white: #fff;
 }
 
 .section-header-font {
-  font-size: 36px;
+  font-size: 29px;
   font-weight: 300;
   color: $blue;
   padding-bottom: 10px;
@@ -142,7 +142,7 @@ $white: #fff;
 
 .base-font {
   margin-top: 35px;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 33px;
   text-align: justify;
 }
@@ -297,6 +297,8 @@ p.inline {
   }
 
   .motto {
+    bottom: 1.5em;
+
     h4 {
       font-size: 1.8em;
       margin-top: 2em;
@@ -304,6 +306,10 @@ p.inline {
       color: $white;
       border: none;
       padding-left: 1em;
+    }
+
+    p {
+      font-style: italic;
     }
   }
 
@@ -401,6 +407,12 @@ p.inline {
 
   .social {
     margin-top: 5em;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .more-info {
+    text-align: center;
   }
 }
 
