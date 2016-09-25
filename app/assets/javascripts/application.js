@@ -29,5 +29,11 @@ $(document).ready(function() {
     $('.span-child').wrap();
   };
 
+  $('.hero-button').click(function() {
+    $('html, body').animate({
+        scrollTop: $('.blog-info').offset().top
+    }, 2000);
+  });
+
   $('.approval-info').tooltip();
 });
